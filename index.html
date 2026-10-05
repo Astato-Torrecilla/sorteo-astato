@@ -3,75 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6f0f18">
 <title>Rifa ASTATO 2027</title>
-<meta name="description" content="Rifa ASTATO 2027 - Sorteo del Niño">
+<meta name="description" content="Rifa ASTATO 2027 - Sorteo del Niño del 6 de enero de 2027">
 <style>
 :root{
-  --red:#b51622;
-  --gold:#c9a24a;
-  --dark:#171717;
-  --cream:#f7f3eb;
+  --burgundy:#6f0f18;
+  --red:#a81727;
+  --green:#173f35;
+  --gold:#caa24b;
+  --gold-light:#ead7a0;
+  --cream:#f7f1e5;
+  --paper:#fffdf8;
+  --ink:#241d1b;
+  --muted:#756b63;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:linear-gradient(180deg,#171717 0,#242424 35%,var(--cream) 35%);
-  color:var(--dark);
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(202,162,75,.08) 0 2px,transparent 3px),
+    radial-gradient(circle at 80% 18%,rgba(111,15,24,.06) 0 2px,transparent 3px),
+    var(--cream);
+  background-size:70px 70px,90px 90px,auto;
 }
-.wrap{max-width:760px;margin:auto;padding:28px 18px 50px}
+body:before{
+  content:"";
+  display:block;
+  height:7px;
+  background:linear-gradient(90deg,var(--green),var(--gold),var(--red),var(--gold),var(--green));
+}
+.wrap{max-width:820px;margin:auto;padding:0 16px 48px}
 .hero{
-  text-align:center;color:white;padding:18px 0 32px;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  color:white;
+  margin:0 -16px 22px;
+  padding:30px 20px 34px;
+  background:
+    radial-gradient(circle at 50% 115%,rgba(202,162,75,.22),transparent 40%),
+    linear-gradient(145deg,#43080e 0%,var(--burgundy) 55%,#35070b 100%);
+  border-bottom:4px solid var(--gold);
+  box-shadow:0 12px 30px rgba(49,11,13,.18);
 }
+.hero:before,
+.hero:after{
+  position:absolute;
+  content:"✦";
+  color:var(--gold-light);
+  opacity:.8;
+  font-size:22px;
+}
+.hero:before{left:18px;top:22px}
+.hero:after{right:18px;top:22px}
+.snow{letter-spacing:14px;color:rgba(255,255,255,.5);font-size:13px;margin-bottom:12px}
 .logo{
-  width:90px;height:90px;object-fit:contain;border-radius:50%;
-  background:white;padding:7px;margin-bottom:12px;
+  width:92px;height:92px;object-fit:contain;border-radius:50%;
+  background:white;padding:7px;border:2px solid var(--gold);
+  box-shadow:0 5px 18px rgba(0,0,0,.22);margin-bottom:14px;
 }
 .badge{
-  display:inline-block;border:1px solid var(--gold);color:var(--gold);
-  padding:6px 14px;border-radius:30px;font-size:12px;font-weight:bold;
+  display:inline-block;
+  border:1px solid var(--gold);
+  color:var(--gold-light);
+  padding:7px 14px;border-radius:30px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;font-weight:700;
   letter-spacing:1.5px;text-transform:uppercase;
+  background:rgba(0,0,0,.12);
 }
-h1{font-size:38px;margin:14px 0 5px}
-.subtitle{font-size:17px;opacity:.9;margin:0}
+h1{
+  margin:13px 0 4px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(34px,8vw,56px);
+  line-height:1;
+  letter-spacing:1px;
+  text-shadow:0 2px 0 #39070b;
+}
+.subtitle{
+  margin:10px 0 0;
+  color:#f5e8c6;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15px;
+  letter-spacing:.5px;
+}
+.date-ribbon{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:18px;padding:9px 16px;
+  border-radius:5px;
+  background:var(--gold);
+  color:#3b2207;
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:800;font-size:13px;
+  box-shadow:0 4px 10px rgba(0,0,0,.16);
+}
 .card{
-  background:white;border-radius:22px;padding:25px 20px;
-  margin:0 0 16px;box-shadow:0 10px 35px rgba(0,0,0,.10);
+  position:relative;
+  background:var(--paper);
+  border:1px solid #eadfc9;
+  border-radius:18px;
+  padding:25px 20px;
+  margin:0 0 17px;
+  box-shadow:0 9px 28px rgba(65,38,25,.08);
 }
-.card h2{text-align:center;margin:0 0 20px;font-size:25px}
+.card:before{
+  content:"";
+  position:absolute;left:18px;right:18px;top:0;height:3px;
+  background:linear-gradient(90deg,var(--red),var(--gold),var(--green));
+  border-radius:0 0 4px 4px;
+}
+.card h2{
+  text-align:center;margin:2px 0 20px;
+  font-size:25px;color:var(--burgundy);
+}
+.section-kicker{
+  text-align:center;
+  margin:-13px 0 18px;
+  color:var(--muted);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;text-transform:uppercase;letter-spacing:1.4px;
+}
 .prize{
-  display:flex;align-items:center;gap:16px;padding:17px 5px;
-  border-bottom:1px solid #eee;
+  display:flex;align-items:center;gap:15px;
+  padding:15px 4px;
+  border-bottom:1px solid #eee4d4;
 }
-.prize:last-child{border-bottom:0}
+.prize:last-child{border-bottom:0;padding-bottom:2px}
 .number{
-  width:48px;height:48px;min-width:48px;border-radius:50%;
-  background:var(--red);color:white;display:flex;align-items:center;
-  justify-content:center;font-size:20px;font-weight:bold;
+  position:relative;
+  width:50px;height:50px;min-width:50px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:white;background:var(--burgundy);
+  border:2px solid var(--gold);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:18px;font-weight:800;
+  box-shadow:0 3px 8px rgba(111,15,24,.18);
 }
-.prize h3{margin:0 0 5px;font-size:17px}
-.prize p{margin:0;color:#777;font-size:14px}
+.number:after{content:"✦";position:absolute;right:-5px;top:-7px;color:var(--gold);font-size:10px}
+.prize h3{margin:0 0 4px;font-size:17px;color:var(--ink)}
+.prize p{margin:0;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:13px}
 .info{
-  background:#fff;border-left:5px solid var(--gold);
-  border-radius:12px;padding:17px 18px;margin-top:16px;
+  position:relative;
+  background:#fbf7ee;
+  border:1px solid #eee2cb;
+  border-left:5px solid var(--gold);
+  border-radius:10px;
+  padding:16px 17px;
+  margin-top:12px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:14px;line-height:1.55;
 }
-.info strong{display:block;margin-bottom:7px}
-.footer{text-align:center;color:#777;font-size:13px;margin-top:25px}
+.info:first-of-type{border-left-color:var(--red)}
+.info:nth-of-type(3){border-left-color:var(--green)}
+.info strong{display:block;margin-bottom:5px;color:var(--burgundy);font-size:14px}
+.tickets{
+  display:flex;justify-content:center;align-items:center;gap:10px;
+  margin:4px 0 20px;
+  font-family:Arial,Helvetica,sans-serif;
+}
+.price{
+  font-size:30px;font-weight:900;color:var(--burgundy);
+}
+.price-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.taurine-line{
+  display:flex;align-items:center;gap:12px;margin:5px 0 18px;color:var(--gold);
+}
+.taurine-line:before,.taurine-line:after{content:"";height:1px;background:var(--gold);opacity:.65;flex:1}
+.taurine-line span{font-size:18px}
+.results{
+  text-align:center;padding:18px;border-radius:13px;
+  background:linear-gradient(135deg,#f6ead0,#fffaf0);
+  border:1px dashed var(--gold);
+}
+.results strong{display:block;color:var(--burgundy);font-size:16px;margin-bottom:6px}
+.results p{margin:0;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:13px}
+.footer{
+  text-align:center;color:#756b63;font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;line-height:1.6;margin-top:25px;
+}
+.footer .brand{font-family:Georgia,"Times New Roman",serif;color:var(--burgundy);font-size:16px;font-weight:bold}
+@media(max-width:480px){
+  .hero{padding-top:25px}
+  .badge{font-size:9px;letter-spacing:1px}
+  .card{padding:23px 16px}
+  .prize{gap:12px}
+  .number{width:46px;height:46px;min-width:46px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="hero">
-    <img src="logo-astato.jpg" class="logo" alt="ASTATO">
+    <div class="snow">✦  ❄  ✦  ❄  ✦</div>
+    <img src="logo-astato.jpg" class="logo" alt="Logo de ASTATO">
     <div class="badge">ASTATO · Asociación Taurina Cultural Torrecilla</div>
     <h1>RIFA ASTATO 2027</h1>
-    <p class="subtitle">Sorteo del Niño · 6 de enero de 2027</p>
+    <p class="subtitle">Tradición taurina · Navidad · El Niño</p>
+    <div class="date-ribbon">❄ 6 DE ENERO DE 2027 · SORTEO DEL NIÑO ❄</div>
   </header>
 
   <section class="card">
     <h2>🏆 Los 5 premios</h2>
+    <div class="section-kicker">Cinco oportunidades de ganar</div>
+    <div class="taurine-line"><span>🐂</span></div>
 
-    <!-- Sustituir estos textos cuando estén decididos los premios -->
     <div class="prize">
       <div class="number">1</div>
       <div><h3>PRIMER PREMIO</h3><p>Premio pendiente de confirmar</p></div>
@@ -96,24 +236,37 @@ h1{font-size:38px;margin:14px 0 5px}
 
   <section class="card">
     <h2>🎟️ ¿Cómo funciona?</h2>
+    <div class="tickets">
+      <div class="price">2 €</div>
+      <div class="price-label">por papeleta</div>
+    </div>
+
     <div class="info">
-      <strong>Precio de la papeleta: 2 €</strong>
+      <strong>🎫 Tu número</strong>
       Cada papeleta tendrá un número de tres cifras.
     </div>
     <div class="info">
-      <strong>Resultado del sorteo</strong>
-      Los números ganadores se determinarán mediante las tres últimas cifras
-      de los premios establecidos del Sorteo Extraordinario de El Niño del
-      6 de enero de 2027.
+      <strong>🎯 ¿Cómo se obtienen los ganadores?</strong>
+      Los números ganadores se determinarán mediante las tres últimas cifras de los premios establecidos del Sorteo Extraordinario de El Niño del 6 de enero de 2027.
     </div>
     <div class="info">
-      <strong>Consulta esta página el día del sorteo</strong>
-      Aquí se publicarán los números ganadores y los premios correspondientes.
+      <strong>📱 Consulta los resultados aquí</strong>
+      Escanea el código QR de tu papeleta y vuelve a esta página el día del sorteo. Aquí se publicarán los números ganadores y los premios correspondientes.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🎄 Resultados</h2>
+    <div class="results">
+      <strong>Los números ganadores se publicarán aquí</strong>
+      <p>Actualizaremos esta página una vez celebrado el Sorteo del Niño.</p>
     </div>
   </section>
 
   <div class="footer">
-    ASTATO · Torrecilla de la Orden · Rifa 2027
+    <div class="brand">ASTATO</div>
+    Asociación Taurina Cultural Torrecilla · Rifa 2027<br>
+    Tradición, fiesta y Navidad.
   </div>
 </div>
 </body>
